@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.exchangerates.presentation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_liveFragment"
+            app:destination="@id/liveFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_historicalFragment"
+            app:destination="@id/historicalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.example.exchangerates.presentation.LiveFragment"
+        android:label="fragment_live"
+        tools:layout="@layout/fragment_live" />
+    <fragment
+        android:id="@+id/historicalFragment"
+        android:name="com.example.exchangerates.presentation.HistoricalFragment"
+        android:label="fragment_historical"
+        tools:layout="@layout/fragment_historical" />
+</navigation>
